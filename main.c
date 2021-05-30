@@ -41,7 +41,7 @@ int add_int(int x, char  const *file)
     struct stat size;
     stat(file, &size);
     int fd = open(file, O_RDONLY);
-    65;6003;1c    char *buffer = malloc(sizeof(char) *(size.st_size + 1));
+    char *buffer = malloc(sizeof(char) *(size.st_size + 1));
     read(fd, buffer, size.st_size);
     buffer[size.st_size] = '\0';
     int res = my_getnbr(buffer) - x;
@@ -128,15 +128,34 @@ void little_commit()
         system("git commit -m c0mmit_b0t_3000");
         system("git push");
     }
+    exit(0);
 }
 
 
 int main(int argc, char **argv)
 {
-    if (argc > 2) {
-        little_commit();
+    int i;
+    char *t1;
+    char *t2;
+    char *t3;
+    char str[100];
+    size_t size = 32;
+    t1 = NULL;
+    t2 = NULL;
+    t3 = NULL;
+    system("git shortlog");
+    printf("\e[0;33m[Ecrit ton nombre de commit: ] \e[0m");
+    getline(&t1, &size, stdin);
+    printf("\e[0;33m[Le nombre de commit que tu veux: ] \e[0m");
+    getline(&t2, &size, stdin);
+    printf("\e[0;33m[Ecrit ton commit: ] \e[0m");
+    getline(&t3, &size, stdin);
+    strcpy(str, "git commit --allow-empty -m ");
+    strcat(str, t3);
+    for(i = atoi(t1); i < atoi(t2); i++) {
+        system(str);
     }
-    for(int i = 0; i < atoi(argv[1]); i++) {
-        system("git commit --allow-empty -m c0mit_b0t");
+    if (i == atoi(t2)) {
+        little_commit();
     }
 }
