@@ -16,15 +16,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/stat.h>
-#include <SFML/Graphics/RenderWindow.h>
-#include <SFML/Audio.h>
-#include <SFML/System.h>
-#include <SFML/Window/Keyboard.h>
-#include <SFML/Window/Mouse.h>
-#include <SFML/System/Export.h>
-#include <SFML/System/Time.h>
-#include <SFML/System/Types.h>
-#include <SFML/Graphics.h>
 
 char *my_put_nbr_to_char(int n);
 

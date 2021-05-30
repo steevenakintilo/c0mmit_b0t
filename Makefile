@@ -20,7 +20,7 @@ CFLAGS =
 all:     $(NAME)
 
 $(NAME): $(OBJ)
-	gcc -lcsfml-graphics -lcsfml-audio -lcsfml-system -lcsfml-window -o $(NAME) $(OBJ) $(CPPFLAGS) $(FLAGS)
+	gcc -o $(NAME) $(OBJ) $(CPPFLAGS) $(FLAGS)
 clean:
 	rm -f $(OBJ)
 
