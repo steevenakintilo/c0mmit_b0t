@@ -118,7 +118,7 @@ int my_strlen(char *str)
         ++i;
     return (i);
 }
-
+/*
 int main(int argc ,char **argv)
 {
     int i = 0;
@@ -127,5 +127,13 @@ int main(int argc ,char **argv)
         system("git add test");
         system("git commit -m c0mmit_b0t");
         system("git push");
+    }
+}
+*/
+
+int main(int argc, char **argv)
+{
+    for(int i = 0; i < atoi(argv[1]); i++) {
+        system("git commit --allow-empty -m c0mit_b0t");
     }
 }
