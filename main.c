@@ -118,21 +118,24 @@ int my_strlen(char *str)
         ++i;
     return (i);
 }
-/*
-int main(int argc ,char **argv)
+
+void little_commit()
 {
     int i = 0;
-    for (i = 0; i < atoi(argv[1]); i++) {
+    for (i = 0; i < 1; i++) {
         write_file("test", my_put_nbr_to_char(i));
         system("git add test");
-        system("git commit -m c0mmit_b0t");
+        system("git commit -m c0mmit_b0t_3000");
         system("git push");
     }
 }
-*/
+
 
 int main(int argc, char **argv)
 {
+    if (argc > 2) {
+        little_commit();
+    }
     for(int i = 0; i < atoi(argv[1]); i++) {
         system("git commit --allow-empty -m c0mit_b0t");
     }
