@@ -128,9 +128,9 @@ void little_commit()
         system("git commit -m c0mmit_b0t_3000");
         system("git push");
     }
+    system("git log --pretty=format:'' | wc -l");
     exit(0);
 }
-
 
 int main(int argc, char **argv)
 {
@@ -143,11 +143,14 @@ int main(int argc, char **argv)
     t1 = NULL;
     t2 = NULL;
     t3 = NULL;
-    system("git shortlog");
+    system("git log --pretty=format:'' | wc -l");
     printf("\e[0;33m[Ecrit ton nombre de commit: ] \e[0m");
     getline(&t1, &size, stdin);
     printf("\e[0;33m[Le nombre de commit que tu veux: ] \e[0m");
     getline(&t2, &size, stdin);
+    if (atoi(t1) >= atoi(t2)) {
+        main(argc, argv);
+    }
     printf("\e[0;33m[Ecrit ton commit: ] \e[0m");
     getline(&t3, &size, stdin);
     strcpy(str, "git commit --allow-empty -m ");
