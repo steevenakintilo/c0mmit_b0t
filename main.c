@@ -119,10 +119,10 @@ int my_strlen(char *str)
     return (i);
 }
 
-int main(void)
+int main(int argc ,char **argv)
 {
     int i = 0;
-    for (i = 0; i < 1000000; i++) {
+    for (i = 0; i < atoi(argv[1]); i++) {
         write_file("test", my_put_nbr_to_char(i));
         system("git add test");
         system("git commit -m c0mmit_b0t");
