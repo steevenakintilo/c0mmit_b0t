@@ -128,12 +128,15 @@ void little_commit()
         system("git commit -m c0mmit_b0t_3000");
         system("git push");
     }
+    system("clear");
+    dprintf(2, "Your Number of Commit(If it's taking time just wait it's loading): ");
     system("git log --pretty=format:'' | wc -l");
     exit(0);
 }
 
 int main(int argc, char **argv)
 {
+    system("clear");
     int i;
     char *t1;
     char *t2;
@@ -143,10 +146,11 @@ int main(int argc, char **argv)
     t1 = NULL;
     t2 = NULL;
     t3 = NULL;
+    dprintf(2, "Your Number of commit(If it's taking time just wait it's loading):  ");
     system("git log --pretty=format:'' | wc -l");
-    printf("\e[0;33m[Ecrit ton nombre de commit: ] \e[0m");
+    printf("\e[0;33m[Write your number of commit: ] \e[0m");
     getline(&t1, &size, stdin);
-    printf("\e[0;33m[Le nombre de commit que tu veux: ] \e[0m");
+    printf("\e[0;33m[Write the number of commit you want: ] \e[0m");
     getline(&t2, &size, stdin);
     if (atoi(t1) >= atoi(t2)) {
         main(argc, argv);
