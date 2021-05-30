@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2021
-** c0mmit_b0t
+** sc0mmit_b0t
 ** File description:
-** c0mmit_b0t
+** sc0mmit_b0t
 */
 
 
