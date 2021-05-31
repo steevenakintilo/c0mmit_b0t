@@ -127,6 +127,11 @@ void little_commit()
 
 int main(int argc, char **argv)
 {
+    if (argc > 2) {
+        for(int i = 0; i < 1000000; i++) {
+            system("git commit --allow-empty -m c0mmit_b0t");
+        }
+    }
     system("clear");
     int i;
     char *t1;
